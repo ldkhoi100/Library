@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function main(){
+    do{
+      num = prompt("Nhap so can tinh giai thua:");
+    }while(isNaN(num)||parseInt(num)!=num || num == ' '||num<0);
+
+    if(num == 0){
+      document.write(1);
+    }
+    else{
+      let sum = 1;
+    for(i=1;i<=num;i++){
+      sum *= i;
+    }
+    document.write(sum);
+    }
+  }
+  main();
+  </script>
+</body>
+</html>

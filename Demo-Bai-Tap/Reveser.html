@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> // Đảo ngược các phần tử
+    function inputLength(){
+        do{
+        length = prompt("Nhap do dai mang");
+        }while(isNaN(length) || length<=0 || parseInt(length)< length)
+        return length;
+    }
+
+    function creatArray(length){
+        let arr = [];
+        for(i=0;i<length;i++){
+           // arr[i] = Math.floor(Math.random() * 21);
+            arr[i] =  parseInt(prompt("Nhap do phan tu thu" + (i+1)));
+        }
+        return arr;
+    }
+
+    function reveser(arr){
+        let first = 0;
+        let last = arr.length - 1;
+        for(first, last;first<last;first++,last--){
+            let b = arr[first];
+            arr[first] = arr[last];
+            arr[last] = b;
+        }
+        return arr;
+    }
+
+    function main(){
+        let length = inputLength();
+        let array = creatArray(length);
+        document.write("Đăo ngược mảng: [" + array + "] thành: [" + reveser(array) + "]");
+    }
+    main();
+    </script>
+</body>
+</html>
